@@ -8,14 +8,14 @@ namespace Greeting
         {
             Console.Write("Hello! What is your name?");
             string name = Console.ReadLine();
-            int hours = DateTime.Now.Hour + 3;
+            int hours = DateTime.Now.Hour;
             Console.Write(Answer(hours, name)); //If you want you can change variable "hours" to any number to debug
         }
         
         public static string Answer(int hours, string name)
         {
             string appeal = "";
-            if (hours >= 0 && hours < 12)
+            if (hours >= 9 && hours < 12)
             {
                 appeal = "Good morning";
             }
@@ -27,7 +27,7 @@ namespace Greeting
             {
                 appeal = "Good evening";
             }
-            else if (hours >= 22 && hours < 24)
+            else
             {
                 appeal = "Good night";
             }

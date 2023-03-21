@@ -8,7 +8,7 @@ namespace Greeting
         {
             Console.Write("Hello! What is your name?");
             string name = Console.ReadLine();
-            int hours = DateTime.Now.Hour + 3;
+            int hours = DateTime.Now.Hour;
             Console.Write(Answer(hours, name)); //If you want you can change variable "hours" to any number to debug
         }
         
@@ -17,7 +17,7 @@ namespace Greeting
             string appeal = "";
             switch (hours)
             {
-            case int h when h >= 0 && h < 12:
+            case int h when h >= 9 && h < 12:
                 appeal = "Good morning";
                 break;
             case int h when h >= 12 && h < 15:
